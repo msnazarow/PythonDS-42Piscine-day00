@@ -19,9 +19,18 @@ ADRESS=$FIRST_TWO_COLUMN'"[^"]*'$GRADES'[^"]*",'
 
 #echo "LOL KEK ;bac bac bac bac " | sed -rn '/.*a.*/ {s/(.*;)[^a]*a[^a]*/\1d /; l}'
 #echo "LOL KEK ;qaq qbq qcq qaq; eat coocies" | sed -r ':label; s/;[^;]*(a|b|c)([^;]*);/;\1\2;/; h;l; tlabel;'
-#echo -n "LOL KEK ;qqqqqqqMashabbbbbbbbbbbSashaeeeeeeeeeeeeeeeeeMashaffffff" | sed -rnz 'h;s/([^;]*;).*/\1/;s/\x00//;P;s/\n//; x; s/([^;]*;)(.*)/\2/;:label; s/(.*)(Masha|Sasha)(.*)/\2/g;x; tlabel; s/(.*)/\1\n/'
-echo "LOL KEK ;qaq qaq qaq qaq " | sed -rnz 'H;s/([^;]*;).*/\1/; s/\x0//; p; x; s/([^;]*;)(.*)/\2/; s/[^a]*a[^a]*/a /g; s/(.*)/\1\n/;p'
+echo -n "LOL KEK ;qqqqqqqMashabbbbbbbbbbbSashaeeeeeeeeeeeeeeeeeMashaffffff" | sed -rn 'h;s/([^;]*;).*/\1/;s/\x00//;p;s/\n//; x; s/([^;]*;)(.*)/\2/;
+h;:label;
+s/(.*)(Masha|Sasha)(.*)/\1/;x;
+s/(.*)(Masha|Sasha)(.*)/\2/;p;g;
+Tlabel2;
+tlabel;
+:label2;
+2s/(.*)/\1\n/'
+#echo -n "LOL KEK ;qaq qaq qaq qaq " | sed -rn 'H;s/([^;]*;).*/\1/; s/\x0//; p; x; s/([^;]*;)(.*)/\2/; s/[^a]*a[^a]*/a /g; s/(.*)/\1\n/;p'
 #echo
 #echo -e "\x00"
 
-#echo "qqqqqqqMashabbbbbbbbbbbSashaeeeeeeeeeeeeeeeeeMashaffffff" | sed  -rn ':label;h;s/(.*)(Masha|Sasha)/\1/; x; s/(.*)(Masha|Sasha)(.*)/\2/;p;x; tlabel;'
+#echo "qqqqqqqMashabbbbbbbbbbbSashaeeeeeeeeeeeeeeeeeMashaffffff" | sed  -rn ':label;
+#h;s/(.*)(Masha|Sasha)/\1/; x; s/(.*)(Masha|Sasha)(.*)/\2/;p;x;
+#tlabel;'
