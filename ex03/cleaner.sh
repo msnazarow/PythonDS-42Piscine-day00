@@ -1,3 +1,4 @@
+#!/bin/sh
 if [ $# -eq 0 ]
   then
     CSV_FILE='../ex02/hh_sorted.csv'
