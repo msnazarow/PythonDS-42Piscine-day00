@@ -6,7 +6,7 @@ if [ $# -eq 0 ]
     CSV_FILE=$1
 fi
 
-GRADES='(Junior|Middle|Senior|junior|middle|senior)'
+GRADES='(Junior\+|Middle\+|Senior\+|junior\+|middle\+|senior\+|Junior|Middle|Senior|junior|middle|senior)'
 FIRST_TWO_COLUMN='"[0-9]*","[^"]*",'
 ADRESS=$FIRST_TWO_COLUMN'"[^"]*'$GRADES'[^"]*",'
 
